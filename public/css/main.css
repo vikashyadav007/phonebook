@@ -6,14 +6,38 @@
 
 body{
     /* text-align: center; */
+    background-color: beige;
 }
-.parent-box{
-    width: 450px;
+
+.parent{
+    width: 700px;
     height: 600px;
     border: 1px solid black;
     padding: 10px;
     margin: 15 auto;
     position: relative;
+    background-color: lightseagreen;
+}
+
+.phonebook{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    background-color: brown;
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 12;
+}
+.parent-box{
+    width: 450px;
+    height: 520px;
+     border: 1px solid black; 
+    /* padding: 10px; */
+    margin: 45 auto;
+    position: relative;
+    background-color: white;
    
 }
 

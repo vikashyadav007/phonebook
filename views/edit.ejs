@@ -10,6 +10,8 @@
 
 </head>
 <body>
+<div class = "parent">
+       <div class = phonebook>Phone book</div>
 <div class="parent-box">
     <div class = "heading">
         <a href="/">
@@ -22,19 +24,19 @@
     <form class = "form" action="<% if (editable){ %>/edit <% } else { %>/add<% } %>" method="POST">
         <label for="name" class="label" >Name</label><br>
         <div class = "inputbox">
-            <input class = "input-field" type="text" placeholder="Enter name" name="name" value="<% if (editable){ %><%= user.name %> <% } %>">
+            <input class = "input-field" type="text" placeholder="Enter name" name="name" value="<% if (editable){ %><%= user.name %> <% } %>" required> 
         </div>  
         <label for="dob" class = "label">DOB:</label><br>
         <div class = "inputbox">
-            <input class = "input-field" type="text" placeholder=" dd/mm/yyyy" name="dob" value="<% if (editable){ %><%= user.dob %> <% } %>">
+            <input class = "input-field" type="text" placeholder=" dd/mm/yyyy" name="dob" value="<% if (editable){ %><%= user.dob %> <% } %>" required>
         </div> 
          <label for="mobileNumber" class = "label">Mobile Number:</label><br>
         <div class = "inputbox">
-            <input class = "input-field" type="text" placeholder="+91 XXXXXXXXXX" name="number" value="<% if (editable){ %><%= user.number %> <% } %>">
+            <input class = "input-field" type="text" placeholder="+91 XXXXXXXXXX" name="number" value="<% if (editable){ %><%= user.number %> <% } %>" required>
         </div> 
          <label for="email" class = "label">Email</label><br>
         <div class = "inputbox">
-            <input class = "input-field" type="text" placeholder="abc@gmail.com" name="email" value="<% if (editable){ %><%= user.email %> <% } %>">
+            <input class = "input-field" type="email" placeholder="abc@gmail.com" name="email" value="<% if (editable){ %><%= user.email %> <% } %>" required>
         </div> 
         <% if (editable){ %> 
             <input type="hidden" name="id" value=<%=user.id%>>
@@ -45,9 +47,9 @@
         </div>
     
     </form> 
-
-   
 </div>
+</div>
+
 <script src = "/js/myscript.js"></script>
 </body>
 </html>
