@@ -1,0 +1,52 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+    /* text-align: center; */
+}
+
+.saveButton{
+    position: absolute;
+    /* margin-left: 160px; */
+    padding-top: 8;
+    padding-bottom: 8;
+    padding-left: 15;
+    padding-right: 15;
+    background-color: green;
+    color:white;
+    cursor: pointer;
+
+    border: none;
+   bottom:10;
+   right: 10;
+   font-size: 25;
+   cursor: pointer;
+}
+
+.heading{
+    display: inline-block;
+    font-size: 30;
+    list-style-type: none;
+}
+
+.form{
+    margin-top: 25;
+}
+
+
+.inputbox{
+    height: 50;
+   margin-bottom: 20;
+    border: 1px solid black;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    padding: 5px;
+}
+
+.label{
+    font-size: 20;
+    font-weight: bold;
+}

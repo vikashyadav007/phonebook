@@ -1,0 +1,156 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+    /* text-align: center; */
+}
+.parent-box{
+    width: 450px;
+    height: 600px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 15 auto;
+    position: relative;
+   
+}
+
+.search-box{
+    height: 50;
+    margin: auto auto;
+    border: 1px solid black;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    padding: 5px;
+}
+
+.input-field{
+    width:100%;
+    border: none;
+    font-size: 20;
+    outline: none;
+}
+
+
+.icon {
+    padding: 10px;
+    color: black;
+    font-size: 60;
+   
+}
+
+.contact-list{
+    width: 100%;
+    height: 70%;
+    border: 1px solid black;
+    margin: 15 auto;
+    overflow-x: hidden; 
+    overflow-x: auto; 
+    float: right;
+}
+
+.single-name-box{
+    height: 50;
+    margin: auto auto;
+     /* border: 1px solid black;  */
+     border-top:1px solid black ; 
+     border-bottom: 1px solid black;
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    padding: 5px;
+}
+.name-field{
+    width: 100%;
+    font-size: large;
+    align-items: flex-start;
+}
+
+.collapsible{
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  /* padding: 18px; */
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.content{
+    position: relative;
+    padding: 0 18px;
+    display: none; 
+    overflow: hidden;
+    background-color: white; 
+    border: none;
+}
+
+.active, .collapsible:hover {
+    
+  }
+  
+.contentItem{
+    display: inline-block;
+    size: 20px;
+    font-weight: bold;
+    margin-bottom: 15;
+
+}
+
+.editButton{
+    position: absolute;
+    /* margin-left: 160px; */
+    padding-top: 2;
+    padding-bottom: 2;
+    padding-left: 10;
+    padding-right: 10;
+    background-color: slategrey;
+    color:white;
+    right:120;
+    cursor: pointer;
+}
+
+.removeButton{
+    position: absolute;
+    /* margin-left: 15;
+    margin-right: 0%; */
+    padding-top: 2;
+    padding-bottom: 2;
+    padding-left: 10;
+    padding-right: 10;
+    background-color:lightcoral;
+    color: white;
+    right: 30;
+    cursor: pointer;
+}
+
+
+.contactBox{
+    width: 100%;
+    height: 80px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: antiquewhite;
+    margin-bottom: 5;
+}
+
+.number{
+    display: inline-block;
+    font-size: 15;
+    font-weight: bold;
+    margin-right: 12;
+    margin-top: 12;
+
+}
+
+.addButton{
+   position: absolute;
+    border: none;
+   bottom:10;
+   right: 10;
+   font-size: 48;
+   cursor: pointer;
+}

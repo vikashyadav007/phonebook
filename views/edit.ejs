@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link href="/css/addStyle.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="parent-box">
+    <div class = "heading">
+        <a href="/">
+           <i class="fa fa-arrow-left"></i>
+        </a>
+        <div class ="heading" ><% if (editable) { %> Update contact <% } else { %> Add new contact <%  } %>
+        </div>
+    </div>
+
+    <form class = "form" action="<% if (editable){ %>/edit <% } else { %>/add<% } %>" method="POST">
+        <label for="name" class="label" >Name</label><br>
+        <div class = "inputbox">
+            <input class = "input-field" type="text" placeholder="Enter name" name="name" value="<% if (editable){ %><%= user.name %> <% } %>">
+        </div>  
+        <label for="dob" class = "label">DOB:</label><br>
+        <div class = "inputbox">
+            <input class = "input-field" type="text" placeholder=" dd/mm/yyyy" name="dob" value="<% if (editable){ %><%= user.dob %> <% } %>">
+        </div> 
+         <label for="mobileNumber" class = "label">Mobile Number:</label><br>
+        <div class = "inputbox">
+            <input class = "input-field" type="text" placeholder="+91 XXXXXXXXXX" name="number" value="<% if (editable){ %><%= user.number %> <% } %>">
+        </div> 
+         <label for="email" class = "label">Email</label><br>
+        <div class = "inputbox">
+            <input class = "input-field" type="text" placeholder="abc@gmail.com" name="email" value="<% if (editable){ %><%= user.email %> <% } %>">
+        </div> 
+        <% if (editable){ %> 
+            <input type="hidden" name="id" value=<%=user.id%>>
+            <% } %>
+
+        <div>
+            <button type="submit" class = "saveButton"><% if (editable) { %> Update <% } else { %> Save <%  } %></button>
+        </div>
+    
+    </form> 
+
+   
+</div>
+<script src = "/js/myscript.js"></script>
+</body>
+</html>

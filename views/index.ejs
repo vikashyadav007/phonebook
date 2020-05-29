@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="parent-box">
+    <div class = "search-box">
+        <input class = "input-field" type="text" placeholder="Enter name" name="search" onkeyup="KeyUp()">
+        <i class="fa fa-search icon" aria-hidden="true"></i>
+    </div>
+    <div class="contact-list">
+        <% if (user.length > 0 ) { %>
+            <% for (let single of user) { %>
+            <div class="buttonParent">
+                <button type="button" class="collapsible">
+
+                    <div class = "single-name-box">
+                        <div class="name-field">
+                           <%= single.name %>
+                        </div>
+                        <i class="fa fa-caret-down icon" aria-hidden="true"></i>
+                    </div>
+                </button>
+                <div class="content">
+                        <div class= "dob contentItem"> <%= single.dob %></div>
+                        <div class = " contentItem">
+                            <a href="/edit/<%= single.id %>" class="btn">
+                                <button class = "editButton">Edit</button>
+                            </a>
+                        </div>
+                        
+                            <div class = " contentItem">
+                                <form action="/remove/<%= single.id %>" method="POST">
+                                    <button class = "removeButton" type = "submit">Remove</button>
+                                </form>
+                            </div>
+                        
+                        <div class = "contactBox">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                    <div class="number"><%= single.number %></div>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <div class="number"><%= single.email %></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                            
+                    </div>
+            </div>
+            <% } %>
+        <% } else { %>
+            <h1> No Contact...</h1>
+        <% } %>
+    </div>
+
+    <a href="/add">
+    <Button class="addButton">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </Button>
+    </a>
+
+
+</div>
+<script src = "/js/myscript.js"></script>
+</body>
+</html>
