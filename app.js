@@ -4,6 +4,7 @@ const path = require('path')
 const User = require('./models/user');
 const Sequelize = require('sequelize');
 const sequelize = require('./util/database');
+const config = require('./config/config.js');
 
 
 const app = new Express()
@@ -13,6 +14,8 @@ app.use(Express.json())
 
 app.set('view engine','ejs');
 app.set('views','views');
+app.set('port',process.env.PORT || 3000);
+app.set('host',config.host);
 
 
 app.get('/',(req,res,next)=>{
@@ -113,5 +116,5 @@ app.post('/remove/:userId',(req,res,next)=>{
 sequelize
     .sync()
     .then((result)=>{
-        app.listen(3000,()=>console.log('Listening to http://127.0.0.1:3000 ......'))
+        app.listen(app.get('port'),()=>console.log( "Listining on port: "+ app.get('port')));
     })
